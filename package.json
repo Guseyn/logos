@@ -1,0 +1,26 @@
+{
+  "name": "@guseyn/logos",
+  "version": "1.0.0",
+  "description": "Logos for my projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Guseyn/logos.git"
+  },
+  "keywords": [
+    "logo"
+  ],
+  "author": "guseyn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Guseyn/logos/issues"
+  },
+  "homepage": "https://github.com/Guseyn/logos#readme",
+  "dependencies": {
+    "svg.js": "^2.7.1",
+    "svgdom": "0.0.15"
+  }
+}
