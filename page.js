@@ -23,4 +23,4 @@ text.font({
   leading:  '1.5em'
 });
 
-fs.writeFileSync('./cutie.html', draw.svg());
+fs.writeFileSync('./page.html', draw.svg());
