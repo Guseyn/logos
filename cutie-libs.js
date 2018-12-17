@@ -32,4 +32,4 @@ libsText.font({
   leading: '1.5em'
 });
 
-fs.writeFileSync('./cutie-libs.html', draw.svg());
+fs.writeFileSync('./cutie-libs.svg', draw.svg());

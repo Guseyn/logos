@@ -32,4 +32,4 @@ libsText.font({
   leading: '1.5em'
 });
 
-fs.writeFileSync('./page-libs.html', draw.svg());
+fs.writeFileSync('./page-libs.svg', draw.svg());
