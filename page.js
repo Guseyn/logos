@@ -17,7 +17,6 @@ const text = draw.text(function(add) {
 text.move(30, 132).rotate(-26);
 text.font({
   family:   'Lucida Grande',
-  color: 'red',
   size:     28,
   anchor:   'middle',
   leading:  '1.5em'
