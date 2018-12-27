@@ -16,10 +16,10 @@ const text = draw.text(function(add) {
 });
 text.move(30, 130).rotate(90);
 text.font({
-  family:   'Lucida Grande',
-  size:     28,
-  anchor:   'middle',
-  leading:  '1.5em'
+  family: 'Lucida Grande',
+  size: 28,
+  anchor: 'middle',
+  leading: '1.5em'
 });
 
 fs.writeFileSync('./wall.svg', draw.svg());
