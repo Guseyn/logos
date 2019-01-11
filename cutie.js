@@ -21,8 +21,7 @@ draw.circle(30).move(60, 120).fill(green);
 draw.circle(30).move(120, 120).fill(green);
 
 const text = draw.text(function(add) {
-  add.tspan('cuti').fill(blue);
-  add.tspan('e').fill(green);
+  add.tspan('cutie').fill(blue);
 });
 text.move(130, 162);
 text.font({
