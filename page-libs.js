@@ -11,6 +11,7 @@ const draw = SVG(document.documentElement).size(140, 50);
 draw.line(10, 11, 80, 11).stroke({ width: 2, color: '#993333' });
 draw.line(11, 11, 11, 40).stroke({ width: 2, color: '#993333' });
 draw.line(11, 39, 80, 39).stroke({ width: 2, color: '#993333' });
+draw.rect(68, 26).move(12, 12).fill('#fff');
 draw.rect(50, 30).move(80, 10).fill('#993333');
 var pageText = draw.text(function(add){
   add.tspan('Page').fill('#333')
