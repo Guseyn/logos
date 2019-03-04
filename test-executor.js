@@ -19,10 +19,11 @@ draw.line(15, 120, 110, 120).stroke({ width: 10, color: '#7fbf7f', linecap: 'rou
 
 const text = draw.text(function(add) {
   add.tspan('6').fill('#7fbf7f');
-  add.tspan(' / ').fill('#111');
+  add.tspan(' |').fill('#7fbf7f');
+  add.tspan('| ').fill('#ff6666');
   add.tspan('2').fill('#ff6666');
 });
-text.move(30, 130);
+text.move(32, 130);
 text.font({
   family: 'Tahoma',
   size: 16,
