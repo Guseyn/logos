@@ -5,17 +5,17 @@ const document = window.document;
 const fs = require('fs');
 
 // create svg.js instance
-const draw = SVG(document.documentElement).size(140, 50);
+const draw = SVG(document.documentElement).size(125, 34);
 
 // use svg.js as normal
-draw.line(10, 11, 80, 11).stroke({ width: 2, color: '#336699' });
-draw.line(11, 11, 11, 40).stroke({ width: 2, color: '#336699' });
-draw.line(11, 39, 80, 39).stroke({ width: 2, color: '#336699' });
-draw.rect(68, 26).move(12, 12).fill('#fff');
-draw.rect(50, 30).move(80, 10).fill('#336699');
+draw.line(2, 3, 72, 3).stroke({ width: 2, color: '#336699' });
+draw.line(3, 3, 3, 32).stroke({ width: 2, color: '#336699' });
+draw.line(3, 31, 72, 31).stroke({ width: 2, color: '#336699' });
+draw.rect(68, 26).move(4, 4).fill('#fff');
+draw.rect(50, 30).move(72, 2).fill('#336699');
 var pageText = draw.text(function(add){
   add.tspan('cutie').fill('#333')
-}).move(46, 15);
+}).move(38, 7);
 pageText.font({
   family: 'Helvetica',
   size: 24,
@@ -25,7 +25,7 @@ pageText.font({
 
 var libsText = draw.text(function(add){
   add.tspan('libs').fill('#fff')
-}).move(106, 15);
+}).move(98, 7);
 libsText.font({
   family: 'Helvetica',
   size: 24,
