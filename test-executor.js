@@ -5,7 +5,7 @@ const document = window.document;
 const fs = require('fs');
 
 // create svg.js instance
-const draw = SVG(document.documentElement).size(150, 150);
+const draw = SVG(document.documentElement).size(125, 150);
 
 // use svg.js as normal
 draw.line(15, 15, 100, 15).stroke({ width: 10, color: '#7fbf7f', linecap: 'round' });
