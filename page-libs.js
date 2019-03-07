@@ -21,12 +21,12 @@ text.font({
 });
 
 const citext = draw.text(function(add){
-  add.tspan('&#9677;').fill('#fff')
+  add.tspan('&#x2606;').fill('#fff')
 });
 citext.font({
   x: '50%',
   y: '78%',
-  size: 34,
+  size: 20,
   family: 'Palatino',
   anchor: 'middle',
   leading: '1.5em'

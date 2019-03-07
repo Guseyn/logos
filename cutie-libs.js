@@ -13,20 +13,20 @@ const text = draw.text(function(add){
 });
 text.font({
   x: '50%',
-  y: '56%',
-  size: 34,
+  y: '54%',
+  size: 24,
   family: 'Palatino',
   anchor: 'middle',
   leading: '1.5em'
 });
 
 const citext = draw.text(function(add){
-  add.tspan('&#9677;').fill('#fff')
+  add.tspan('&#x2606;').fill('#fff')
 });
 citext.font({
   x: '50%',
   y: '78%',
-  size: 34,
+  size: 20,
   family: 'Palatino',
   anchor: 'middle',
   leading: '1.5em'
