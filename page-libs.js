@@ -5,30 +5,17 @@ const document = window.document;
 const fs = require('fs');
 
 // create svg.js instance
-const draw = SVG(document.documentElement).size(125, 34);
+const draw = SVG(document.documentElement).size(125, 125);
 
-// use svg.js as normal
-draw.line(2, 3, 72, 3).stroke({ width: 2, color: '#993333' });
-draw.line(3, 3, 3, 32).stroke({ width: 2, color: '#993333' });
-draw.line(3, 31, 72, 31).stroke({ width: 2, color: '#993333' });
-draw.rect(68, 26).move(4, 4).fill('#fff');
-draw.rect(50, 30).move(72, 2).fill('#993333');
-var pageText = draw.text(function(add){
-  add.tspan('Page').fill('#333')
-}).move(38, 7);
-pageText.font({
-  family: 'Helvetica',
-  size: 24,
-  anchor: 'middle',
-  leading: '1.5em'
+const circle = draw.circle(125).fill('#c65454')
+const text = draw.text(function(add){
+  add.tspan('page-libs').fill('#fff')
 });
-
-var libsText = draw.text(function(add){
-  add.tspan('libs').fill('#fff')
-}).move(98, 7);
-libsText.font({
-  family: 'Helvetica',
+text.font({
+  x: '50%',
+  y: '54%',
   size: 24,
+  family: 'Palatino',
   anchor: 'middle',
   leading: '1.5em'
 });
