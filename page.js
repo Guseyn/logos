@@ -9,7 +9,7 @@ const draw = SVG(document.documentElement).size(230, 180);
 
 const path = draw.path('M 10 30 C 10 30 120 120 170 90 L -50 200')
 path.fill('none').move(10, 10)
-path.stroke({ color: '#E0E0E0', width: 2, linecap: 'round', linejoin: 'round' })
+path.stroke({ color: '#454545', width: 1, linecap: 'round', linejoin: 'round' })
 
 const text = draw.text(function(add) {
   add.tspan('Page').fill('#C40233');
