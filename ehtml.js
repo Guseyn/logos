@@ -5,7 +5,9 @@ const document = window.document;
 const fs = require('fs');
 
 // create svg.js instance
-const draw = SVG(document.documentElement).size(320, 100).fill('#ff0000');
+const draw = SVG(document.documentElement).size(280, 62).fill('#ff0000');
+
+draw.style.fillOpacity = '0.0'
 
 const color = '#ffdd59';
 const border = '#485460';
@@ -64,24 +66,24 @@ const E_H_T_M_L = draw.polyline(
     [ 30, 30 ], [ 60, 30 ],
     [ 60, 30 ], [ 60, 19 ]
   ]
-).fill(color).stroke({ width: 2, color: border })
+).fill(color).stroke({ width: 2, color: border }).move(0, 0)
 
 const gap1 = draw.polyline(
   [
     [ 181, 70 ], [ 189, 70 ],
   ]
-).fill(color).stroke({ width: 4, color: color })
+).fill(color).stroke({ width: 4, color: color }).move(161, 50)
 
 const gap2 = draw.polyline(
   [
     [ 71, 70 ], [ 79, 70 ],
   ]
-).fill(color).stroke({ width: 4, color: color })
+).fill(color).stroke({ width: 4, color: color }).move(51, 50)
 
 const gap3 = draw.polyline(
   [
     [ 80, 46 ], [ 80, 54 ],
   ]
-).fill(color).stroke({ width: 4, color: color })
+).fill(color).stroke({ width: 4, color: color }).move(60, 27)
 
 fs.writeFileSync('./ehtml.svg', draw.svg());
