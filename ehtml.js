@@ -70,18 +70,18 @@ const gap1 = draw.polyline(
   [
     [ 181, 70 ], [ 189, 70 ],
   ]
-).fill(color).stroke({ width: 2, color: color })
+).fill(color).stroke({ width: 4, color: color })
 
 const gap2 = draw.polyline(
   [
     [ 71, 70 ], [ 79, 70 ],
   ]
-).fill(color).stroke({ width: 2, color: color })
+).fill(color).stroke({ width: 4, color: color })
 
 const gap3 = draw.polyline(
   [
     [ 80, 46 ], [ 80, 54 ],
   ]
-).fill(color).stroke({ width: 2, color: color })
+).fill(color).stroke({ width: 4, color: color })
 
 fs.writeFileSync('./ehtml.svg', draw.svg());
