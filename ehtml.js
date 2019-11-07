@@ -62,7 +62,7 @@ const E_H_T_M_L = draw.polyline(
     [ 60, 45 ], [ 30, 45 ],
     [ 30, 45 ], [ 30, 30 ],
     [ 30, 30 ], [ 60, 30 ],
-    [ 60, 30 ], [ 60, 19 ]
+    [ 60, 30 ], [ 60, 20 ]
   ]
 ).fill(color).stroke({ width: 1, color: border }).move(1, 0)
 
