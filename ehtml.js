@@ -64,7 +64,7 @@ const E_H_T_M_L = draw.polyline(
     [ 30, 30 ], [ 60, 30 ],
     [ 60, 30 ], [ 60, 19 ]
   ]
-).fill(color).stroke({ width: 2, color: border }).move(1, 0)
+).fill(color).stroke({ width: 1, color: border }).move(1, 0)
 
 const gap1 = draw.polyline(
   [
