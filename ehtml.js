@@ -62,7 +62,7 @@ const E_H_T_M_L = draw.polyline(
     [ 60, 45 ], [ 30, 45 ],
     [ 30, 45 ], [ 30, 30 ],
     [ 30, 30 ], [ 60, 30 ],
-    [ 60, 30 ], [ 60, 20 ]
+    [ 60, 30 ], [ 60, 19.5 ]
   ]
 ).fill(color).stroke({ width: 1, color: border }).move(1, 1)
 
@@ -82,6 +82,6 @@ const gap3 = draw.polyline(
   [
     [ 80, 46 ], [ 80, 55 ],
   ]
-).fill(color).stroke({ width: 6, color: color }).move(61, 26.5)
+).fill(color).stroke({ width: 6, color: color }).move(61, 27)
 
 fs.writeFileSync('./ehtml.svg', draw.svg());
