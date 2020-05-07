@@ -5,7 +5,7 @@ const document = window.document;
 const fs = require('fs');
 
 // create svg.js instance
-const draw = SVG(document.documentElement).size(500, 500);
+const draw = SVG(document.documentElement).size(230, 80);
 
 const color = '#DC143C';
 const border = '#222';
