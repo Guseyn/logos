@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.com/svgjs" width="230" height="120">
+    <filter id="sofGlow" height="300%" width="300%" x="-95%" y="-95%">
+      <!-- Thicken out the original shape -->
+      <feMorphology operator="dilate" radius="4" in="SourceAlpha" result="thicken" />
+
+      <!-- Use a gaussian blur to create the soft blurriness of the glow -->
+      <feGaussianBlur in="thicken" stdDeviation="10" result="blurred" />
+
+      <!-- Change the colour -->
+      <feFlood flood-color="rgb(255,0,0)" result="glowColor" />
+
+      <!-- Color in the glows -->
+      <feComposite in="glowColor" in2="blurred" operator="in" result="softGlow_colored" />
+
+      <!--  Layer the effects together -->
+      <feMerge>
+        <feMergeNode in="softGlow_colored"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+
+    </filter>
+    <filter id="sofGlowInner" height="300%" width="300%" x="-85%" y="-85%">
+      <!-- Thicken out the original shape -->
+      <feMorphology operator="dilate" radius="4" in="SourceAlpha" result="thicken" />
+
+      <!-- Use a gaussian blur to create the soft blurriness of the glow -->
+      <feGaussianBlur in="thicken" stdDeviation="10" result="blurred" />
+
+      <!-- Change the colour -->
+      <feFlood flood-color="rgb(255,165,0)" result="glowColor" />
+
+      <!-- Color in the glows -->
+      <feComposite in="glowColor" in2="blurred" operator="in" result="softGlow_colored" />
+
+      <!--  Layer the effects together -->
+      <feMerge>
+        <feMergeNode in="softGlow_colored"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+
+    </filter>
+    <defs id="SvgjsDefs1001"></defs>
+    <svg id="SvgjsSvg1002" width="2" height="0" focusable="false" style="overflow: hidden; top: -100%; left: -100%; position: absolute; opacity: 0">
+        <polyline id="SvgjsPolyline1003" points="0,0"></polyline>
+        <path id="SvgjsPath1004" d="M0 0 "></path>
+    </svg>
+    <circle id="SvgjsCircle1006" r="50" cx="60" cy="60" fill="lightgrey" stroke-linejoin="bevel" stroke-linecap="butt" stroke="#222222" stroke-width="1"></circle>
+    <circle id="SvgjsCircle1007" r="20" cx="60" cy="60" fill="red" stroke-linejoin="bevel" stroke-linecap="butt" stroke="#222222" stroke-width="1"  filter="url(#sofGlow)"></circle>
+    <circle id="SvgjsCircle1008" r="7.5" cx="59.5" cy="59.5" fill="orange" stroke-linejoin="bevel" stroke-linecap="butt" stroke="#222222" stroke-width="1" filter="url(#sofGlowInner)"></circle>
+</svg>
