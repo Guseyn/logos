@@ -32,7 +32,7 @@ draw.path(
   'M 100 100 L 125 0 L 130 0 L 105 100 L 100 100'
   +
   'M 200 100 L 175 0 L 170 0 L 195 100 L 200 100'
-).fill('#404952').stroke({ width: 1.5, color: '#404952' }).attr('fill-rule', 'evenodd').attr('stroke-linejoin', 'miter').attr('stroke-linecap', 'round').move(80, 125)
+).fill('#404952').stroke({ width: 1.5, color: '#404952' }).attr('fill-rule', 'evenodd').attr('stroke-linejoin', 'miter').attr('stroke-linecap', 'round').move(80, 125.2)
 draw.text(function(add){
   add.tspan('mea').fill('white')
 }).font({
@@ -46,7 +46,7 @@ draw.text(function(add){
 draw.text(function(add){
   add.tspan('{java}').fill('#eb4d4b')
 }).font({
-  x: 130.0,
+  x: 129.5,
   y: 101.5,
   size: 30,
   family: 'Brush Script MT',
