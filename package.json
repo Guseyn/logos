@@ -21,6 +21,7 @@
   "homepage": "https://github.com/Guseyn/logos#readme",
   "dependencies": {
     "svg.js": "^2.7.1",
-    "svgdom": "0.0.15"
+    "svgdom": "0.0.15",
+    "text-to-svg": "^3.1.5"
   }
 }

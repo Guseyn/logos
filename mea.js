@@ -2,6 +2,8 @@ const window  = require('svgdom');
 const SVG  = require('svg.js')(window);
 const document = window.document;
 const fs = require('fs');
+const TextToSVG = require('text-to-svg');
+const textToSVG = TextToSVG.loadSync('./BRUSHSCI.ttf');
 
 const draw = SVG(document.documentElement).size(222, 236);
 
@@ -33,24 +35,23 @@ draw.path(
   +
   'M 200 100 L 175 0 L 170 0 L 195 100 L 200 100'
 ).fill('#404952').stroke({ width: 1.5, color: '#404952' }).attr('fill-rule', 'evenodd').attr('stroke-linejoin', 'miter').attr('stroke-linecap', 'round').move(80, 125.2)
-draw.text(function(add){
-  add.tspan('mea').fill('white')
-}).font({
-  x: 131.5,
-  y: 51.5,
-  size: 40,
-  family: 'Brush Script MT',
-  anchor: 'middle',
-  leading: '1.5em'
-})
-draw.text(function(add){
-  add.tspan('{java}').fill('#eb4d4b')
-}).font({
-  x: 129.5,
-  y: 101.5,
-  size: 30,
-  family: 'Brush Script MT',
-  anchor: 'middle',
-  leading: '1.5em'
-})
+
+draw.path(
+  textToSVG.getD('mea', {
+    x: 107.5,
+    y: 51.5,
+    fontSize: 40,
+    family: 'Brush Script MT',
+    leading: '1.5em'
+  })
+).fill('white')
+draw.path(
+  textToSVG.getD('{java}', {
+    x: 95.5,
+    y: 100.5,
+    fontSize: 30,
+    family: 'Brush Script MT',
+    leading: '1.5em'
+  })
+).fill('#eb4d4b')
 fs.writeFileSync('./mea.svg', draw.svg());
